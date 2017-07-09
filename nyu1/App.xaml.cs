@@ -8,7 +8,21 @@ namespace nyu1
         {
             InitializeComponent();
 
-            MainPage = new nyu1Page();
+            this.GoToMainPage();
+        }
+
+        private void GoToMainPage()
+        {
+            Current.MainPage = new TabbedPage
+            {
+                Children = {
+                    new NavigationPage(new FirstView())
+                    {
+                        Title = "Browse",
+						Icon = Device.RuntimePlatform == Device.iOS ? "tab_feed.png" : null
+					},
+				}
+			};
         }
 
         protected override void OnStart()
