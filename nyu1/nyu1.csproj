@@ -58,6 +58,7 @@
     <Compile Include="Helpers\ObservableRangeCollection.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Services\IDataStore.cs" />
+    <Compile Include="Services\MockDataStore.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
