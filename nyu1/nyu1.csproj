@@ -48,6 +48,7 @@
       <DependentUpon>nyu1Page.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="Helpers\ObservableRangeCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
