@@ -41,8 +41,8 @@ namespace nyu1.ViewModels
             try
             {
                 Items.Clear();
-                //var items = await DataStore.GetItemsAsync(true);
-                //Items.ReplaceRange(items);
+                var items = await DataStore.GetItemsAsync(true);
+                Items.ReplaceRange(items);
             }
             catch (Exception ex)
             {
