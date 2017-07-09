@@ -47,6 +47,7 @@
     <Compile Include="Views\nyu1Page.xaml.cs">
       <DependentUpon>nyu1Page.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\ItemsViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="Helpers\ObservableRangeCollection.cs" />
     <Compile Include="Models\Item.cs" />
