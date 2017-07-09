@@ -1,12 +1,19 @@
-﻿using Xamarin.Forms;
+﻿using nyu1.Services;
+using Xamarin.Forms;
 
 namespace nyu1
 {
     public partial class App : Application
     {
+        public static bool UseMockDataStore = true;
         public App()
         {
-            InitializeComponent();
+            this.InitializeComponent();
+
+            if (UseMockDataStore)
+            {
+                DependencyService.Register<MockDataStore>();
+            }
 
             this.GoToMainPage();
         }
