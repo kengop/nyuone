@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using nyu1.Services;
 using Xamarin.Forms;
 
 namespace nyu1.ViewModels
@@ -10,7 +11,7 @@ namespace nyu1.ViewModels
         /// <summary>
         /// Get the azure service instance
         /// </summary>
-        //public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
 
 
         public ObservableRangeCollection<Item> Items { get; set; }
