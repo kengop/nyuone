@@ -16,9 +16,14 @@ namespace nyu1
             Current.MainPage = new TabbedPage
             {
                 Children = {
-                    new NavigationPage(new FirstView())
+                    new NavigationPage(new Views.nyu1Page())
                     {
-                        Title = "Browse",
+                        Title = "Front",
+						Icon = Device.RuntimePlatform == Device.iOS ? "tab_feed.png" : null
+					},
+					new NavigationPage(new Views.FirstView())
+					{
+						Title = "Browse",
 						Icon = Device.RuntimePlatform == Device.iOS ? "tab_feed.png" : null
 					},
 				}
