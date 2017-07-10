@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using nyu1.ViewModels;
 using Xamarin.Forms;
 
 namespace nyu1.Views
 {
     public partial class LogView : ContentPage
     {
-        public LogView()
+		ItemsViewModel viewModel;
+
+		public LogView()
         {
-            //BindingContext = viewModel = new ItemsViewModel();
+            this.InitializeComponent();
+            this.BindingContext = viewModel = new ItemsViewModel();
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -33,8 +36,8 @@ namespace nyu1.Views
         {
             base.OnAppearing();
 
-            //if (viewModel.Items.Count == 0)
-                //viewModel.LoadItemsCommand.Execute(null);
+            if (viewModel.Items.Count == 0)
+                viewModel.LoadItemsCommand.Execute(null);
         }
     }
 }
