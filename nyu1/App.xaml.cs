@@ -38,6 +38,11 @@ namespace nyu1
                         Title = "Browse",
                         Icon = Device.RuntimePlatform == Device.iOS ? "tab_feed.png" : null
                     },
+                    new NavigationPage(new Views.WebView())
+                    {
+                        Title = "WebView",
+                        Icon = Device.RuntimePlatform == Device.iOS ? "tab_feed.png" : null
+                    }
                 }
             };
         }
