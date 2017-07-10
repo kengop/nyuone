@@ -59,6 +59,7 @@
     <Compile Include="Models\Item.cs" />
     <Compile Include="Services\IDataStore.cs" />
     <Compile Include="Services\MockDataStore.cs" />
+    <Compile Include="ViewModels\WebViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
