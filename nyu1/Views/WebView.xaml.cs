@@ -11,5 +11,15 @@ namespace nyu1.Views
 
             this.BindingContext = new WebViewModel();
         }
+
+        private void webOnNavigating(object sender, WebNavigatingEventArgs e)
+        {
+            this.LoadingLabel.IsVisible = true;
+        }
+
+        private void webOnEndNavigating(object sender, WebNavigatedEventArgs e)
+        {
+            this.LoadingLabel.IsVisible = false;
+        }
     }
 }
