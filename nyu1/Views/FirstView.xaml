@@ -3,7 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:nyu1.ViewModels;"
              x:Class="nyu1.Views.FirstView">
+    <ContentPage.BindingContext>
+        <vm:TsuikaViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
         <StackLayout Spacing="20" Padding="15">
             <ProgressBar Progress="0.7"/>
             <Button Text="Button"/>
@@ -14,6 +18,10 @@
             </Picker>
             <SearchBar Text="Search!"/>
             <Slider Value="1" />
+            <Button Text="データ書込" Command="{Binding Path=SaveFileCommand}"/>
+            <Button Text="データ読込" Command="{Binding Path=LoadFileCommand}"/>
+            <Entry Text="{Binding Path=LocalData}"/>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
